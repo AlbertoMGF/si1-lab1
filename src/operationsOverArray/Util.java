@@ -8,6 +8,10 @@ public class Util <T extends Comparable<T>>  {
 		return getMaxItem(arr, new MaxComparator<T>());
 	}
 	
+	public T getMin(T[] arr){
+		return getMaxItem(arr, new MinComparator<T>());
+	}
+	
 	private T getMaxItem(T[] arr, Comparator<T> comp){
 		if (isArrayValid(arr)) {
 			
