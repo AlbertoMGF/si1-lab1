@@ -4,6 +4,22 @@ import java.util.Comparator;
 
 public class Util <T extends Comparable<T>>  {
 	
+	public String toString(T[] arr){
+		String s = "[";
+		
+		if (arr.length < 1) {
+			s += "]";
+		}else{
+			for (int i = 0; i < arr.length - 1; i++) {
+				s += arr[i] + " ,"; 
+			}
+			s += arr[arr.length - 1];
+			s += "]";
+		}
+		
+		return s;
+	}
+	
 	public T getMax(T[] arr){
 		return getMaxItem(arr, new MaxComparator<T>());
 	}

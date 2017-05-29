@@ -93,5 +93,15 @@ public class UtilTest {
 		Integer result = tool.getMin(array3);
 		Assert.assertEquals(result, new Integer(-100));
 	}
+	
+	@Test
+	public void testToString() {
+		array3[2] = new Integer(10);
+		array3[9] = new Integer(-100);
+		array3[5] = new Integer(190);
+		array3[7] = new Integer(90);
+		Util<Integer> tool = new Util<Integer>();
+		Assert.assertEquals("[null ,null ,10 ,null ,null ,190 ,null ,90 ,null ,-100]", tool.toString(array3));
+	}
 
 }
